@@ -1,0 +1,27 @@
+##
+# A headline content element that is allowed to be added to pages and blog articles
+# It only has formatting options relevant for headlines
+#
+'Shel.Blog.Template:Content.Headline':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Shel.Blog.Template:Constraint.SectionContent': true
+  ui:
+    icon: 'heading'
+    label: 'Headline'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            hyphens: true
+            placeholder: 'Enter headline here'
+            formatting:
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              a: true
+

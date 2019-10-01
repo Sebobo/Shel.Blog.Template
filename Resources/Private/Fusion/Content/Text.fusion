@@ -1,0 +1,7 @@
+prototype(Shel.Blog.Template:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+    renderer = afx`
+        <div class="text-content">
+            <Neos.Neos:Editable property="text"/>
+        </div>
+    `
+}

@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        'Shel.Blog.Template': true
+
+    Ui:
+      frontendConfiguration:
+        'Shel.Neos:ColorPickerEditor':
+          mode: 'hsla'

@@ -1,0 +1,9 @@
+prototype(Shel.Blog.Template:Document.Page) < prototype(Neos.Neos:Page) {
+    body {
+        content {
+            main.primaryContent = Neos.Neos:PrimaryContent {
+                nodePath = 'main'
+            }
+        }
+    }
+}

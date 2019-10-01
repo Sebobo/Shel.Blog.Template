@@ -1,0 +1,9 @@
+prototype(Shel.Blog:Document.GenericBlogPage) {
+    body {
+        content {
+            main.primaryContent = Neos.Neos:PrimaryContent {
+                nodePath = 'main'
+            }
+        }
+    }
+}

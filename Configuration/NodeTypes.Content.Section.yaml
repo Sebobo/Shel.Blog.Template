@@ -1,0 +1,16 @@
+##
+# A semantic section element that can contain other elements
+#
+'Shel.Blog.Template:Content.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'Shel.Blog.Template:Constraint.PageContent': true
+    'Shel.Blog:Constraint.Article': true
+  ui:
+    icon: 'stream'
+    label: 'Section'
+  constraints:
+    nodeTypes:
+      '*': false
+      'Shel.Blog.Template:Constraint.SectionContent': true

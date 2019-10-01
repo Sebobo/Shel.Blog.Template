@@ -1,0 +1,29 @@
+prototype(Shel.Blog.Template:Content.Banner) < prototype(Neos.Neos:ContentComponent) {
+    link = ${q(node).property('link')}
+    imageSrc = Neos.Neos:ImageUri {
+        asset = ${q(node).property('image')}
+        maximumWidth = 450
+        maximumHeight = 250
+    }
+    alternativeText = ${q(node).property('alternativeText')}
+
+    renderer = afx`
+        <section class="banner-content" id="banner">
+            <div class="content">
+                <header>
+                    <h1><Neos.Neos:Editable property="title"/></h1>
+                    <p><Neos.Neos:Editable property="subtitle"/></p>
+                </header>
+                <p><Neos.Neos:Editable property="text"/></p>
+                <ul class="actions">
+                    <li>
+                        <Neos.Neos:NodeLink node={props.link} attributes.class="button big" attributes.title={q(item.node).property('title')}/>
+                    </li>
+                </ul>
+            </div>
+            <span class="image object">
+                <img src={props.imageSrc} alt={props.alternativeText} />
+            </span>
+        </section>
+    `
+}

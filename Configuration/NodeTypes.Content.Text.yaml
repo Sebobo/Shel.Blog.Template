@@ -1,0 +1,29 @@
+##
+# A text content element that is allowed to be added to pages and blog articles
+# It has some basic formatting options
+#
+'Shel.Blog.Template:Content.Text':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Shel.Blog.Template:Constraint.SectionContent': true
+  ui:
+    icon: 'align-left'
+    label: 'Text'
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Enter text here'
+            formatting:
+              h2: true
+              h3: true
+              h4: true
+              p: true
+              a: true
+              strong: true
+              ol: true
+              ul: true
+

@@ -1,0 +1,4 @@
+prototype(Shel.Blog:Component.Article) {
+    renderer.attributes.class.@process.addSectionClass = ${value + ' section-content'}
+}
+

@@ -1,0 +1,23 @@
+prototype(Shel.Blog:Component.Teaser) {
+    thumbnailWidth = 450
+    thumbnailHeight = 250
+
+    renderer {
+        attributes.class.@process.addSectionClass >
+
+        content {
+            header {
+                content.image.attributes.class = 'image'
+            }
+            footer = afx`
+                <ul class="actions">
+                    <li>
+                        <a href={props.articleUri} class="blog-teaser__more button" title={props.title}>
+                            {I18n.translate('Shel.Blog:Main:blogEntry.action.more')}
+                        </a>
+                    </li>
+                </ul>
+            `
+        }
+    }
+}

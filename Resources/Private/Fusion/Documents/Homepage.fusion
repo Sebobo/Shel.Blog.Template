@@ -1,0 +1,3 @@
+prototype(Shel.Blog.Template:Document.Homepage) < prototype(Shel.Blog.Template:Document.Page) {
+
+}

@@ -1,0 +1,79 @@
+##
+# A banner element that is allowed to be added to pages
+# It has several properties including an image
+#
+'Shel.Blog.Template:Content.Banner':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Shel.Blog.Template:Constraint.PageContent': true
+  ui:
+    icon: 'square'
+    label: 'Banner'
+    inspector:
+      groups:
+        options:
+          label: 'Options'
+          icon: 'gears'
+          tab: 'default'
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            hyphens: true
+            placeholder: 'Enter heading here'
+            formatting:
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+    subtitle:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Enter subtitle here'
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Enter text here'
+            formatting:
+              h2: true
+              h3: true
+              h4: true
+              p: true
+              a: true
+              strong: true
+              i: true
+    link:
+      type: reference
+      ui:
+        label: 'Link'
+        reloadIfChanged: true
+        inspector:
+          group: options
+          editorOptions:
+            placeholder: 'Type to search page'
+            nodeTypes:
+              - 'Shel.Blog.Template:Document.Page'
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: true
+        inspector:
+          group: options
+    alternativeText:
+      type: string
+      ui:
+        label: 'Alternative Text'
+        inspector:
+          group: options
+          position: 'after image'
+

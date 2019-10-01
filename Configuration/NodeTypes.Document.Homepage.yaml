@@ -1,0 +1,61 @@
+'Shel.Blog.Template:Document.Homepage':
+  superTypes:
+    'Shel.Blog.Template:Document.Page': true
+  ui:
+    icon: 'globe'
+    label: 'Homepage'
+    inspector:
+      groups:
+        options:
+          label: 'Options'
+          icon: 'gears'
+          tab: 'default'
+        theme:
+          label: 'Theme'
+          icon: 'paint-roller'
+          tab: 'default'
+          collapsed: true
+  properties:
+    creator:
+      type: string
+      ui:
+        label: 'Creator'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'options'
+    email:
+      type: string
+      ui:
+        label: 'Email address'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'options'
+    phone:
+      type: string
+      ui:
+        label: 'Phone'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'options'
+    address:
+      type: string
+      ui:
+        label: 'Address'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'options'
+    city:
+      type: string
+      ui:
+        label: 'City'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'options'
+    primaryThemeColor:
+      type: string
+      ui:
+        label: 'Primary theme color'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'theme'
+          editor: 'Shel.Neos.ColorPicker/ColorPickerEditor'

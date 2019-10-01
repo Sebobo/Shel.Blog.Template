@@ -1,0 +1,30 @@
+prototype(Shel.Blog.Template:Component.Menu) < prototype(Neos.Fusion:Component) {
+    menuItems = Neos.Neos:MenuItems {
+        startingPoint = ${site}
+    }
+
+    renderer = afx`
+        <nav id="menu">
+            <header class="major">
+                <h2>Menu</h2>
+            </header>
+            <ul>
+                <Neos.Fusion:Loop items={props.menuItems}>
+                    <li @if.hasNoSubItems={!item.subItems}>
+                        <Neos.Neos:NodeLink node={item.node} attributes.title={q(item.node).property('title')}/>
+                    </li>
+                    <li @if.hasSubItems={item.subItems}>
+                        <span class="opener">{item.label}</span>
+                        <ul>
+                            <Neos.Fusion:Loop items={item.subItems}>
+                                <li>
+                                    <Neos.Neos:NodeLink node={item.node} attributes.title={q(item.node).property('title')}/>
+                                </li>
+                            </Neos.Fusion:Loop>
+                        </ul>
+                    </li>
+                </Neos.Fusion:Loop>
+            </ul>
+        </nav>
+    `
+}

@@ -1,0 +1,15 @@
+prototype(Shel.Blog:Content.LatestArticles) {
+    renderer {
+        renderer = afx`
+            <section class="blog-latest-articles">
+                <header class="major">
+                    <h2>Latest articles</h2>
+                </header>
+                <div class="posts">
+                    {props.renderFeed ? props.feedContent : props.noEntriesFound}
+                </div>
+            </section>
+        `
+    }
+}
+

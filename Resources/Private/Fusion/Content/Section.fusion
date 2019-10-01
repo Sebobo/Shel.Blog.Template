@@ -1,0 +1,7 @@
+prototype(Shel.Blog.Template:Content.Section) < prototype(Neos.Neos:ContentComponent) {
+    renderer = afx`
+        <section class="section-content">
+            <Neos.Neos:ContentCollection/>
+        </section>
+    `
+}

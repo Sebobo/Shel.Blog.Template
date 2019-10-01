@@ -1,0 +1,10 @@
+prototype(Shel.Blog:Component.ArticlePager) {
+    renderer.content {
+        attributes.class = 'actions'
+        content {
+            prev.content.attributes.class = 'button'
+            current.content.attributes.class = 'button'
+            next.content.attributes.class = 'button'
+        }
+    }
+}

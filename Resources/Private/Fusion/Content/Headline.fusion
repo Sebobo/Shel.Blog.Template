@@ -1,0 +1,7 @@
+prototype(Shel.Blog.Template:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+    renderer = afx`
+        <div class="headline-content">
+            <Neos.Neos:Editable property="title"/>
+        </div>
+    `
+}

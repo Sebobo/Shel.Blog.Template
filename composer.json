@@ -1,0 +1,27 @@
+{
+    "name": "shel/neos-blog-template",
+    "description": "A template package to build a site with the Shel.Blog Neos CMS plugin",
+    "type": "neos-package",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "Neos CMS",
+        "Template",
+        "Blog"
+    ],
+    "require": {
+        "neos/neos": "~4.3.0",
+        "neos/fusion-afx": "~1.3",
+        "shel/blog": "~5.0",
+        "shel/neos-colorpicker": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shel\\Blog\\Template\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Shel.Blog.Template"
+        }
+    }
+}
