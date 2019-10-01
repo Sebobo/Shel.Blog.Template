@@ -1,12 +1,13 @@
-prototype(Shel.Blog.Template:Component.Contact) < prototype(Neos.Fusion:Component) {
-    email = ${q(site).property('email')}
-    phone = ${q(site).property('phone')}
-    address = ${q(site).property('address')}
-    city = ${q(site).property('city')}
+prototype(Shel.Blog.Template:Component.Contact) < prototype(Neos.Neos:ContentComponent) {
+    @context.node = ${site}
+    email = ${q(node).property('email')}
+    phone = ${q(node).property('phone')}
+    address = ${q(node).property('address')}
+    city = ${q(node).property('city')}
 
     contactIntroduction = Neos.Neos:Editable {
         property = 'contactIntroduction'
-        node = ${site}
+        block = false
     }
 
     renderer = afx`
@@ -14,7 +15,7 @@ prototype(Shel.Blog.Template:Component.Contact) < prototype(Neos.Fusion:Componen
             <header class="major">
                 <h2>Get in touch</h2>
             </header>
-            <div>{props.contactIntroduction}</div>
+            <p>{props.contactIntroduction}</p>
             <ul class="contact">
                 <li class="icon solid fa-envelope" @if.set={props.email}>
                     <a href={'mailto:' + props.email}>{props.email}</a>
@@ -28,4 +29,16 @@ prototype(Shel.Blog.Template:Component.Contact) < prototype(Neos.Fusion:Componen
             </ul>
         </section>
     `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+
+        entryTags {
+            node = ${Neos.Caching.nodeTag(node)}
+        }
+    }
 }
