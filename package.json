@@ -1,0 +1,16 @@
+{
+    "name": "Shel.Blog.Template",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/Sebobo/Shel.Blog.Template.git",
+    "author": "Sebastian Helzle <sebastian@helzle.it>",
+    "license": "GPLv3",
+    "private": true,
+    "dependencies": {
+        "node-sass": "^4.12.0"
+    },
+    "scripts": {
+        "watch": "node-sass -w --output-style=expanded Resources/Private/Styles/main.scss Resources/Public/Styles/main.css",
+        "build": "node-sass --output-style=compressed Resources/Private/Styles/main.scss Resources/Public/Styles/main.css"
+    }
+}
