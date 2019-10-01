@@ -1,3 +1,11 @@
 Shel.Blog:Content.LatestArticles:
   superTypes:
     'Shel.Blog.Template:Constraint.PageContent': true
+  properties:
+    title:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: Blog list title...
