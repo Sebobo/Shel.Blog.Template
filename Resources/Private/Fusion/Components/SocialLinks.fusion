@@ -1,0 +1,42 @@
+prototype(Shel.Blog.Template:Component.SocialLinks) < prototype(Neos.Fusion:Component) {
+    twitterName = ${q(site).property('twitterName')}
+    githubName = ${q(site).property('githubName')}
+    facebookName = ${q(site).property('facebookName')}
+    linkedinName = ${q(site).property('linkedinName')}
+    xingName = ${q(site).property('xingName')}
+    instagramName = ${q(site).property('instagramName')}
+    youTubeName = ${q(site).property('youTubeName')}
+    email = ${q(site).property('email')}
+
+    renderer = afx`
+        <ul class="icons">
+            <li @if.hasPropertySet={props.twitterName}>
+                <Shel.Blog.Template:Component.SocialLink href={"https://twitter.com/" + props.twitterName} title="Twitter" icon="fa-twitter-square"/>
+            </li>
+            <li @if.hasPropertySet={props.githubName}>
+                <Shel.Blog.Template:Component.SocialLink href={"https://github.com/" + props.githubName} title="Github" icon="fa-github-square"/>
+            </li>
+            <li @if.hasPropertySet={props.facebookName}>
+                <Shel.Blog.Template:Component.SocialLink href={"http://facebook.com/" + props.facebookName} title="Facebook" icon="fa-facebook-square"/>
+            </li>
+            <li @if.hasPropertySet={props.linkedinName}>
+                <Shel.Blog.Template:Component.SocialLink href={"https://www.linkedin.com/in/" + props.linkedinName} title="LinkedIn" icon="fa-linkedin"/>
+            </li>
+            <li @if.hasPropertySet={props.xingName}>
+                <Shel.Blog.Template:Component.SocialLink href={"https://www.xing.com/profile/" + props.xingName} title="Xing" icon="fa-xing-square"/>
+            </li>
+            <li @if.hasPropertySet={props.instagramName}>
+                <Shel.Blog.Template:Component.SocialLink href={"https://www.instagram.com/" + props.instagramName} title="Instagram" icon="fa-instagram"/>
+            </li>
+            <li @if.hasPropertySet={props.youTubeName}>
+                <Shel.Blog.Template:Component.SocialLink href={"https://www.youtube.com/channel/" + props.youTubeName} title="Instagram" icon="fa-youtube"/>
+            </li>
+            <li @if.hasPropertySet={props.email}>
+                <a href={"mailto:" + props.email} title="Email">
+                    <i class="far fa-lg fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+    `
+    @process.networkteamNeosMailObfuscator = Networkteam.Neos:MailObfuscator
+}

@@ -1,0 +1,58 @@
+'Shel.Blog.Template:Mixin.SocialMedia':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        socialMedia:
+          label: 'Social Media'
+          icon: 'share-alt'
+          tab: 'default'
+  properties:
+    facebookName:
+      type: string
+      ui:
+        label: 'Facebook name'
+        inspector:
+          group: socialMedia
+    xingName:
+      type: string
+      ui:
+        label: 'Xing name'
+        inspector:
+          group: socialMedia
+    linkedinName:
+      type: string
+      ui:
+        label: 'LinkedIn name'
+        inspector:
+          group: socialMedia
+    twitterName:
+      type: string
+      ui:
+        label: 'Twitter name'
+        inspector:
+          group: socialMedia
+    youTubeName:
+      type: string
+      ui:
+        label: 'YouTube channel name'
+        inspector:
+          group: socialMedia
+    githubName:
+      type: string
+      ui:
+        label: 'Github name'
+        inspector:
+          group: socialMedia
+    instagramName:
+      type: string
+      ui:
+        label: 'Instagram name'
+        inspector:
+          group: socialMedia
+    flattrName:
+      type: string
+      ui:
+        label: 'Flattr name'
+        inspector:
+          group: socialMedia

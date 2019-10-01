@@ -12,7 +12,8 @@
         "neos/neos": "~4.3.0",
         "neos/fusion-afx": "~1.3",
         "shel/blog": "~5.0",
-        "shel/neos-colorpicker": "~1.1"
+        "shel/neos-colorpicker": "~1.1",
+        "networkteam/neos-mailobfuscator": "~2.2"
     },
     "autoload": {
         "psr-4": {

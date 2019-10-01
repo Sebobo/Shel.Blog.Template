@@ -1,0 +1,11 @@
+prototype(Shel.Blog.Template:Component.SocialLink) < prototype(Neos.Fusion:Component) {
+    href = ''
+    title = ''
+    icon = ''
+
+    renderer = afx`
+        <a href={props.href} target="_blank" title={props.title} rel="nofollow noopener noreferrer">
+            <i class={'fab fa-lg ' + props.icon}></i>
+        </a>
+    `
+}

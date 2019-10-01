@@ -1,0 +1,31 @@
+prototype(Shel.Blog.Template:Component.Contact) < prototype(Neos.Fusion:Component) {
+    email = ${q(site).property('email')}
+    phone = ${q(site).property('phone')}
+    address = ${q(site).property('address')}
+    city = ${q(site).property('city')}
+
+    contactIntroduction = Neos.Neos:Editable {
+        property = 'contactIntroduction'
+        node = ${site}
+    }
+
+    renderer = afx`
+        <section>
+            <header class="major">
+                <h2>Get in touch</h2>
+            </header>
+            <div>{props.contactIntroduction}</div>
+            <ul class="contact">
+                <li class="icon solid fa-envelope" @if.set={props.email}>
+                    <a href={'mailto:' + props.email}>{props.email}</a>
+                </li>
+                <li class="icon solid fa-phone" @if.set={props.phone}>
+                    {props.phone}
+                </li>
+                <li class="icon solid fa-home" @if.set={props.address && props.city}>
+                    {props.address}<br />{props.city}
+                </li>
+            </ul>
+        </section>
+    `
+}

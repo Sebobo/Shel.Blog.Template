@@ -1,6 +1,7 @@
 'Shel.Blog.Template:Document.Homepage':
   superTypes:
     'Shel.Blog.Template:Document.Page': true
+    'Shel.Blog.Template:Mixin.SocialMedia': true
   ui:
     icon: 'globe'
     label: 'Homepage'
@@ -51,6 +52,14 @@
         reloadPageIfChanged: true
         inspector:
           group: 'options'
+    contactIntroduction:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Enter contact introduction'
+
     primaryThemeColor:
       type: string
       ui:

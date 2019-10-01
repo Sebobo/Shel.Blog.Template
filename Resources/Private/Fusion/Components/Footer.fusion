@@ -1,0 +1,14 @@
+prototype(Shel.Blog.Template:Component.Footer) < prototype(Neos.Fusion:Component) {
+    creator = ${q(site).property('creator')}
+
+    renderer = afx`
+        <footer id="footer">
+            {props.footer}
+            <p class="copyright">
+                &copy; {props.creator}. All rights reserved.<br/>
+                Design: <a href="https://html5up.net">HTML5 UP</a>.<br/>
+                Neos CMS adaption: <a href="https://helzle.it">Sebastian Helzle</a>.
+            </p>
+        </footer>
+    `
+}
